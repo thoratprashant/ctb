@@ -9,19 +9,15 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 // third party
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { IconModule } from '@ant-design/icons-angular';
-
-// bootstrap import
-import { NgbDropdownModule, NgbNavModule, NgbModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+ 
+import { MaterialModule } from './material.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule, 
-    NgbDropdownModule,
-    NgbNavModule,
-    NgbModule,
-    NgbCollapseModule,
+    MaterialModule,
+    ReactiveFormsModule,  
     NgScrollbarModule, 
     IconModule
   ],
