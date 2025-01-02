@@ -11,12 +11,14 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 import { IconModule } from '@ant-design/icons-angular';
  
 import { MaterialModule } from './material.module';
+import { SharedRoutingModule } from './shared-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     MaterialModule,
+    SharedRoutingModule,
     ReactiveFormsModule,  
     NgScrollbarModule, 
     IconModule
