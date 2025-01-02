@@ -1,5 +1,5 @@
 // angular import
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -8,5 +8,9 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export default class LoginComponent {
- 
+  hide = signal(true);
+  clickEvent(event: MouseEvent) {
+    this.hide.set(!this.hide());
+    event.stopPropagation();
+  }
 }
