@@ -8,6 +8,7 @@ import { SharedModule } from '../theme/shared/shared.module';
 import { MaterialModule } from '../theme/shared/material.module';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { NgOtpInputModule } from 'ng-otp-input';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     CommonModule,
     AuthRoutingModule,
     SharedModule, 
-    FormsModule, 
+    FormsModule,
+    NgOtpInputModule  
   
   ]
 })

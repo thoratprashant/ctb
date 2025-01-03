@@ -1,12 +1,11 @@
 // angular import
 import { Component, inject, signal } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { FormBuilder, Validators } from '@angular/forms'; 
 
 @Component({
   selector: 'app-login', 
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'], 
 })
 export default class LoginComponent {
   private _formBuilder = inject(FormBuilder);
@@ -22,4 +21,6 @@ export default class LoginComponent {
     this.hide.set(!this.hide());
     event.stopPropagation();
   }
+
+  onOtpChange(otp: string) { console.log('OTP changed:', otp); }
 }

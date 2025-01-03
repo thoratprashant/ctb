@@ -74,6 +74,12 @@
                 <p class="font-18">We sent a verification code to <span class="font-bold"> +1 987 654 3210 </span></p>
               </div>
               <div class="col-12">
+                <!-- With Event Binding -->
+                <label class="font-medium font-16 mb-2">Enter OTP</label> 
+                <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{ length: 6 }"></ng-otp-input> 
+                <a class="d-flex justify-content-end link text-decoration-none text-end mt-3 resend--veri">Resend Verification Code</a>
+                </div>
+              <div class="col-12">
                 <button mat-raised-button color="primary" class="w-100 mt-2 mb-3">Verify and Submit</button> 
                 <button mat-button class="text-primary" matStepperPrevious>
                     <mat-icon>arrow_back</mat-icon>
