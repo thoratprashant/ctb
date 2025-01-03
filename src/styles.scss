@@ -64,6 +64,15 @@ body {
         }
     }
 
+    ::placeholder {
+        color: #919AA3 !important;
+        opacity: 1; /* Firefox */
+      }
+      
+      ::-ms-input-placeholder { /* Edge 12 -18 */
+        color: #919AA3 !important;
+      }
+
     // Angular Material
     .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, 
     .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background,
