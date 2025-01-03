@@ -1,4 +1,20 @@
- 
+ .sign--in--wrapper{
   .remember--me{
     margin-left: -10px;
   }
+  ::ng-deep{
+    .mat-stepper-horizontal{
+      .mat-horizontal-stepper-wrapper{
+        .mat-horizontal-stepper-header-container{
+          display: none;
+        }
+        .mat-horizontal-content-container{
+          padding: 0;
+        }
+      }
+    }
+  }
+  .note--mar{
+    margin-bottom: 170px;
+  }
+ }

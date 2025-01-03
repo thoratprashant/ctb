@@ -74,6 +74,11 @@ body {
       }
 
     // Angular Material
+    .mat-stepper-vertical, 
+    .mat-stepper-horizontal{
+        font-family: 'Helvetica-regular' !important;   
+    }
+
     .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, 
     .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background,
     .mdc-checkbox__native-control:focus:focus:checked~.mdc-checkbox__background, 
