@@ -10,7 +10,7 @@
             <mat-step [stepControl]="firstFormGroup">
               <form [formGroup]="firstFormGroup"> 
                 <div class="col-12">
-                  <h6 class="font-medium font-18">Sign In</h6>
+                  <h6 class="font-bold font-18">Sign In</h6>
                   <p>Please login to your account</p>
                 </div>
                 <div class="form-group mb-3">
@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-12"> 
                   <div class="form-group mb-3 text-center">
-                    <p>Not registered yet? <a class="link text-decoration-none">Create an account </a></p>
+                    <p>Not registered yet? <a class="link text-decoration-none" [routerLink]="['/sign-up']">Create an account </a></p>
                   </div>
                 </div>
               </form>
@@ -48,7 +48,7 @@
             <mat-step [stepControl]="secondFormGroup" >
               <form [formGroup]="secondFormGroup">
                 <div class="col-12">
-                  <h6 class="font-medium font-18 mb-4">Sign In</h6> 
+                  <h6 class="font-bold font-18 mb-4">Sign In</h6> 
                 </div>
                 <div class="form-group mb-3">
                   <label class="form-label">Phone Number</label>
@@ -70,7 +70,7 @@
             </mat-step>
             <mat-step> 
               <div class="col-12">
-                <h6 class="font-medium font-18 mb-4">Sign In</h6> 
+                <h6 class="font-bold font-18 mb-4">Sign In</h6> 
                 <p class="font-18">We sent a verification code to <span class="font-bold"> +1 987 654 3210 </span></p>
               </div>
               <div class="col-12">

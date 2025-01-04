@@ -9,13 +9,15 @@ import { MaterialModule } from '../theme/shared/material.module';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { NgOtpInputModule } from 'ng-otp-input';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     ForgotPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    SignUpComponent
   ],
   imports: [
     MaterialModule,
