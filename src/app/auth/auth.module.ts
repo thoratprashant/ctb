@@ -6,8 +6,7 @@ import LoginComponent from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../theme/shared/shared.module';
 import { MaterialModule } from '../theme/shared/material.module';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component'; 
 import { NgOtpInputModule } from 'ng-otp-input';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
@@ -15,8 +14,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 @NgModule({
   declarations: [
     LoginComponent,
-    ForgotPasswordComponent,
-    ResetPasswordComponent,
+    ForgotPasswordComponent, 
     SignUpComponent
   ],
   imports: [
