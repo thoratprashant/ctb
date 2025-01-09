@@ -12,8 +12,9 @@ import { IconModule } from '@ant-design/icons-angular';
  
 import { MaterialModule } from './material.module';
 import { SharedRoutingModule } from './shared-routing.module';
+import { AdminLayoutComponent } from '../layouts/admin-layout/admin-layout.component';
 
-@NgModule({
+@NgModule({ 
   imports: [
     CommonModule,
     FormsModule,
@@ -29,6 +30,9 @@ import { SharedRoutingModule } from './shared-routing.module';
     ReactiveFormsModule, 
     SpinnerComponent,  
   ],
-  declarations: [SpinnerComponent]
+  declarations: [
+    AdminLayoutComponent,
+    SpinnerComponent
+  ]
 })
 export class SharedModule {}

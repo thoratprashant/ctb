@@ -3,24 +3,15 @@ import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-// Project import
-import { SharedModule } from '../../shared/shared.module'; 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { MediaMatcher } from '@angular/cdk/layout';
-import { MatMenuModule } from '@angular/material/menu';
+// Project import 
+import { MediaMatcher } from '@angular/cdk/layout'; 
 
 @Component({
-  selector: 'app-admin',
-  standalone: true,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatListModule, MatMenuModule],
+  selector: 'app-admin-layout', 
   templateUrl: './admin-layout.component.html',
   styleUrls: ['./admin-layout.component.scss']
 })
-export class AdminComponent {
+export class AdminLayoutComponent {
   mobileQuery: MediaQueryList;  
 
   private _mobileQueryListener: () => void;

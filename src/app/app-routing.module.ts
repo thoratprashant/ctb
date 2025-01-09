@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 // Project import  
 import { AuthLayoutComponent } from './theme/layouts/auth-layout/auth-layout.component';
-import { AdminComponent } from './theme/layouts/admin-layout/admin-layout.component';
+import { AdminLayoutComponent } from './theme/layouts/admin-layout/admin-layout.component';
 
 const routes: Routes = [
 
@@ -15,7 +15,7 @@ const routes: Routes = [
   }, 
   {
     path: 'admin',
-    component: AdminComponent, 
+    component: AdminLayoutComponent, 
   }, 
   
 ];
