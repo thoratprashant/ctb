@@ -39,8 +39,10 @@ body {
 
     .clr--001f2b{color: #001F2B !important;}
     .clr--009BD6, .text-primary{color: #009BD6 !important;}
+    .text-secondary {color: #919AA3 !important;}
 
     .link{color: #009bd6; cursor: pointer;}
+    .cursor-pointer {cursor: pointer !important;}
     .error{
         font-size: 13px;
         color: #f82f2f;
@@ -74,6 +76,7 @@ body {
       }
 
     // Angular Material
+    .mat-mdc-menu-content, .mat-mdc-menu-content .mat-mdc-menu-item .mat-mdc-menu-item-text,
     .mat-stepper-vertical, 
     .mat-stepper-horizontal{
         font-family: 'Helvetica-regular' !important;   

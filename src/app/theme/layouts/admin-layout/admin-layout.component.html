@@ -1,45 +1,40 @@
-<app-navigation
-  class="pc-sidebar"
-  [ngClass]="{
-    'navbar-collapsed': navCollapsed,
-    'mob-open': navCollapsedMob
-  }"
-  (NavCollapse)="this.navCollapsed = !this.navCollapsed"
-/>
-<app-nav-bar (NavCollapsedMob)="navMobClick()" (NavCollapse)="this.navCollapsed = !this.navCollapsed" />
-<div class="pc-container">
-  <div class="coded-wrapper">
-    <div class="coded-content">
-      <div class="coded-inner-content">
-        <app-breadcrumb />
-        <div class="main-body">
-          <div class="page-wrapper">
-            <router-outlet></router-outlet>
-          </div>
-        </div>
-      </div>
+<div class="admin--container" [class.layout-is-mobile]="mobileQuery.matches">
+
+  <mat-toolbar class="admin--toolbar d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center">
+      <button class="me-3" mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+      <img src="../../../../assets/images/logo-hori.svg" alt="" class="img-fluid ">
     </div>
-  </div>
-  <div class="pc-menu-overlay" (click)="closeMenu()" (keydown)="handleKeyDown($event)" tabindex="0"></div>
+    <button mat-button [matMenuTriggerFor]="beforeMenu" >
+      
+    </button>
+    <div class="round--profile cursor-pointer d-flex align-items-center justify-content-center" [matMenuTriggerFor]="beforeMenu">
+      <img src="assets/images/user/avatar-1.jpg" alt="" class="img-fluid" />
+    </div>
+    <mat-menu class="profile--menus" #beforeMenu="matMenu" xPosition="before">
+      <div class="w-100 d-flex flex-column user--info">
+        <h2 class="font-16 font-bold mb-0 clr--001f2b">James White</h2>
+        <p class="mb-0 font-14 text-secondary"> Super Admin </p>
+      </div>
+      <button mat-menu-item class="font-bold"> <mat-icon class="me-2 clr--001f2b">account_circle</mat-icon> My Profile</button>
+      <button mat-menu-item class="font-bold"> <mat-icon class="me-2 clr--001f2b">logout</mat-icon> Sign Out</button>
+    </mat-menu>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="admin--sidenav--container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+        opened="true">
+      <mat-nav-list>
+        <a mat-list-item routerLink=""> <mat-icon>dashboard</mat-icon> Dashboard</a>
+      </mat-nav-list>
+      <mat-nav-list>
+        <a mat-list-item routerLink=""> <mat-icon>manage_accounts</mat-icon> Manage Hospitals</a>
+      </mat-nav-list>
+    </mat-sidenav> 
+
+    <mat-sidenav-content>
+      <h1>hii</h1>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
 </div>
-<footer class="pc-footer">
-  <div class="footer-wrapper container-fluid">
-    <div class="row">
-      <div class="col my-1">
-        <p class="m-0">
-          Copyright &copy;
-          <a href="https://codedthemes.com" target="_blank">CodedThemes</a>
-        </p>
-      </div>
-      <div class="col-auto my-1">
-        <ul class="list-inline footer-link mb-0">
-          <li class="list-inline-item"><a href="https://codedthemes.com/" target="_blank">Home</a></li>
-          <li class="list-inline-item">
-            <a href="https://codedthemes.com/privacy-policy/" target="_blank">Privacy Policy</a>
-          </li>
-          <li class="list-inline-item"><a href="https://codedthemes.support-hub.io/" target="_blank">Contact us</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>

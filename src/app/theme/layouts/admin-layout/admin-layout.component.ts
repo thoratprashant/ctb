@@ -1,49 +1,40 @@
 // Angular import
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 // Project import
-import { SharedModule } from '../../shared/shared.module';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { SharedModule } from '../../shared/shared.module'; 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-admin',
   standalone: true,
-  imports: [CommonModule, SharedModule, NavigationComponent, NavBarComponent, RouterModule],
+  imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatListModule, MatMenuModule],
   templateUrl: './admin-layout.component.html',
   styleUrls: ['./admin-layout.component.scss']
 })
 export class AdminComponent {
-  // public props
-  navCollapsed: boolean;
-  navCollapsedMob: boolean;
+  mobileQuery: MediaQueryList;  
 
-  // public method
-  navMobClick() {
-    if (this.navCollapsedMob && !document.querySelector('app-navigation.pc-sidebar')?.classList.contains('mob-open')) {
-      this.navCollapsedMob = !this.navCollapsedMob;
-      setTimeout(() => {
-        this.navCollapsedMob = !this.navCollapsedMob;
-      }, 100);
-    } else {
-      this.navCollapsedMob = !this.navCollapsedMob;
-    }
-    if (document.querySelector('app-navigation.pc-sidebar')?.classList.contains('navbar-collapsed')) {
-      document.querySelector('app-navigation.pc-sidebar')?.classList.remove('navbar-collapsed');
-    }
+  private _mobileQueryListener: () => void;
+
+  constructor() {
+    const changeDetectorRef = inject(ChangeDetectorRef);
+    const media = inject(MediaMatcher);
+
+    this.mobileQuery = media.matchMedia('(max-width: 800px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
-  handleKeyDown(event: KeyboardEvent): void {
-    if (event.key === 'Escape') {
-      this.closeMenu();
-    }
-  }
-
-  closeMenu() {
-    if (document.querySelector('app-navigation.pc-sidebar')?.classList.contains('mob-open')) {
-      document.querySelector('app-navigation.pc-sidebar')?.classList.remove('mob-open');
-    }
+  ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 }
