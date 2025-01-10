@@ -80,6 +80,20 @@ body {
             border-color: #009bd6;
         }
     }
+    .search--field{
+        position: relative;
+        .search--btn{
+            position: absolute;
+            right: 0;
+            top: 6px;
+            .mat-icon{
+                font-size: 24px;
+                width: 24px;
+                height: 24px;
+                color: #009bd6;
+            }
+        }
+    }
 
     ::placeholder {
         color: #919AA3 !important;
@@ -121,11 +135,23 @@ body {
         text-align: center;
         box-shadow: none;
         border-radius: 8px;
+        &.btn-md{
+            padding: 20px 8px;
+        }
         &.mat-primary{
             background-color: #009BD6;
             color: #fff;
         }
+        &.icon--btn{
+            min-width: unset;
+            .mat-icon{
+                font-size: 22px;
+                width: 22px;
+                height: 22px;
+            }
+        }
     }
+    
 
     .password--field{
         .mdc-icon-button{

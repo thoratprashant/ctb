@@ -12,7 +12,7 @@ import { IconModule } from '@ant-design/icons-angular';
  
 import { MaterialModule } from './material.module';
 import { SharedRoutingModule } from './shared-routing.module';
-import { AdminLayoutComponent } from '../layouts/admin-layout/admin-layout.component';
+import { AdminLayoutComponent } from '../layouts/admin-layout/admin-layout.component'; 
 
 @NgModule({ 
   imports: [
@@ -31,7 +31,7 @@ import { AdminLayoutComponent } from '../layouts/admin-layout/admin-layout.compo
     SpinnerComponent,  
   ],
   declarations: [
-    AdminLayoutComponent,
+    AdminLayoutComponent, 
     SpinnerComponent
   ]
 })

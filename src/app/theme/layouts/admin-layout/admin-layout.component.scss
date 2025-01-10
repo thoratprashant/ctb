@@ -65,6 +65,12 @@
             }
         }
     }
+    .mat-drawer-container{
+        .mat-drawer-content{
+            padding: 20px 15px 15px 20px;
+        }
+    }
+
   }
    
   ::ng-deep{
