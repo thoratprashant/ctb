@@ -139,7 +139,7 @@ body {
         padding: 24px 5px;
         text-align: center;
         box-shadow: none;
-        border-radius: 8px;
+        border-radius: 4px;
         &.btn-md{
             padding: 20px 8px;
         }
@@ -156,6 +156,16 @@ body {
                 font-size: 22px;
                 width: 22px;
                 height: 22px;
+            }
+        }
+        &.back--btn{
+            width: 40px;
+            height: 40px;
+            min-width: unset;
+            .mat-icon{
+                font-size: 24px;
+                height: 24px;
+                width: 24px;
             }
         }
     }
@@ -223,6 +233,41 @@ body {
             margin-top: 10px;
             font-family: 'Helvetica-regular' !important;   
         }
+    }
+
+    // Outline form field's
+    .mat-form-field-appearance-outline{
+        margin-bottom: 24px;
+        .mat-mdc-text-field-wrapper{
+            .mat-mdc-form-field-flex{
+                .mat-mdc-form-field-infix{
+                    padding: 12px 0;
+                    min-height: unset;
+                }
+                .mat-mdc-floating-label {
+                    top: 23px;
+                    font-family: 'Helvetica-regular', sans-serif !important;
+                    color: #919AA3;
+                }
+            }
+        }
+        .mat-mdc-form-field-subscript-wrapper{
+            display: none;
+        }
+    } 
+    .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above{
+        --mat-mdc-form-field-label-transform: translateY(calc(calc(1.75px + var(--mat-form-field-container-height) / 2)* -1)) scale(var(--mat-mdc-form-field-floating-label-scale, 0.75)); 
+        color: #001F2B !important;
+    }
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mat-mdc-notch-piece{
+        border-color: #919AA3;
+    }
+    .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-text-field__input{
+        color: #001F2B;
+        font-family: 'Helvetica-regular', sans-serif !important;
+    }
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mat-mdc-notch-piece{
+        border-color: #009BD6 !important;
     }
     
 

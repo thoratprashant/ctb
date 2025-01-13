@@ -6,11 +6,13 @@ import { ManageHospitalsComponent } from './manage-hospitals/manage-hospitals.co
 import { MaterialModule } from '../theme/shared/material.module';
 import { SharedModule } from '../theme/shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { AddHospitalComponent } from './manage-hospitals/add-hospital/add-hospital.component';
 
 
 @NgModule({
   declarations: [
-    ManageHospitalsComponent
+    ManageHospitalsComponent,
+    AddHospitalComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,46 @@
+<div class="container-fluid add--hospital--wrapper clr--001f2b">
+    <div class="row">
+        <div class="col-12">
+            <button mat-stroked-button class="btn-md back--btn mb-3" [routerLink]="['/super-admin/manage-hospitals']">
+                <mat-icon class="m-0 text-primary">keyboard_backspace</mat-icon>
+            </button>
+        </div>
+        <div class="col-12">
+            <div class="outer--box">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="font-18 font-bold mb-4 mt-1">Add Hospital</h1>
+                        <h2 class="font-18 font-bold mb-4">Hospital Details</h2>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <mat-form-field appearance="outline" class="w-100 ">
+                            <mat-label>Hospital name*</mat-label>
+                            <input matInput placeholder="Hospital name*">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <mat-form-field appearance="outline" class="w-100 ">
+                            <mat-label>Address line 1*</mat-label>
+                            <input matInput placeholder="Address line 1*">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <mat-form-field appearance="outline" class="w-100 ">
+                            <mat-label>Address line 2*</mat-label>
+                            <input matInput placeholder="Address line 2*">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <mat-form-field appearance="outline" class="w-100 ">
+                            <mat-label>City*</mat-label>
+                            <mat-select>
+                              <mat-option value="one">First option</mat-option>
+                              <mat-option value="two">Second option</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

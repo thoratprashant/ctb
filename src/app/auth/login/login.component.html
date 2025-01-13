@@ -60,11 +60,16 @@
                 </div>
                 <div class="col-12">
                   <button mat-raised-button color="primary" class="w-100 mt-2 mb-3" matStepperNext>Next</button> 
+                   
+                </div>
+                <div class="col-12 mb-3 d-flex align-items-center justify-content-between">
                   <button mat-button class="text-primary" matStepperPrevious>
                       <mat-icon>arrow_back</mat-icon>
                       Back
                   </button>
-                </div>
+                  <p class="mb-0">Already have an account? <a class="link text-decoration-none"
+                          [routerLink]="['/sign-up']">Sign in here </a></p>
+              </div>
                  
               </form>
             </mat-step>
@@ -81,11 +86,16 @@
                 </div>
               <div class="col-12">
                 <button mat-raised-button color="primary" class="w-100 mt-2 mb-3" [routerLink]="['/super-admin/manage-hospitals']">Verify and Submit</button> 
+                 
+              </div>
+              <div class="col-12 mb-3 d-flex align-items-center justify-content-between">
                 <button mat-button class="text-primary" matStepperPrevious>
                     <mat-icon>arrow_back</mat-icon>
                     Back
                 </button>
-              </div>
+                <p class="mb-0">Already have an account? <a class="link text-decoration-none"
+                        [routerLink]="['/sign-up']">Sign in here </a></p>
+            </div>
             </mat-step>
           </mat-stepper>
           
