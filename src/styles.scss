@@ -47,6 +47,7 @@ body {
         font-size: 13px;
         color: #f82f2f;
     }
+   
 
     /* For Webkit browsers (Chrome, Safari, etc.) */
     input[type=number]::-webkit-inner-spin-button,
@@ -118,6 +119,7 @@ body {
         border-color: #009bd6;
         background-color: #009bd6;
     }
+    
     .mat-mdc-checkbox{
         .mdc-form-field{
             .mdc-label{
@@ -149,6 +151,66 @@ body {
                 width: 22px;
                 height: 22px;
             }
+        }
+    }
+
+    // Angular Material Table
+    .cust--mat--table{  
+        border-radius: 8px;
+        .mat-mdc-table{
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
+            thead{
+                tr{
+                    height: auto;
+                    th{
+                        font-family: 'Helvetica-bold' !important;
+                        padding: 10px 16px;
+                        background: #FBFBFB; 
+                        border-color: #F0F0F2;
+                        &:first-child{
+                            border-top-left-radius:8px
+                        }
+                        &:last-child{
+                            border-top-right-radius:8px
+                        }
+                        .mat-sort-header-container{
+                            .mat-sort-header-content{
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    height: auto;
+                    td{
+                        font-family: 'Helvetica-regular' !important;   
+                        padding: 10px 16px;
+                        background: #FBFBFB;
+                        border: 0;
+                        &:first-child{
+                            border-bottom-left-radius:8px
+                        }
+                        &:last-child{
+                            border-bottom-right-radius:8px
+                        }
+                    }
+                    &.mat-mdc-no-data-row{
+                        td{
+                            height: 100px;
+                            background: #ddebf0;
+                            text-align: center;
+                            font-family: 'Helvetica-bold' !important;   
+                        }
+                    }
+                }
+            }
+        }
+        mat-paginator{
+            margin-top: 10px;
+            font-family: 'Helvetica-regular' !important;   
         }
     }
     
