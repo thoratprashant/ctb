@@ -144,6 +144,9 @@ body {
             background-color: #009BD6;
             color: #fff;
         }
+        &.mat-warn{
+            background-color: #FFAEAE;
+        }
         &.icon--btn{
             min-width: unset;
             .mat-icon{
