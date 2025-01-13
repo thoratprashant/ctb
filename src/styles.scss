@@ -83,6 +83,9 @@ body {
     }
     .search--field{
         position: relative;
+        .form-control{
+            padding-right: 50px;
+        }
         .search--btn{
             position: absolute;
             right: 0;
@@ -160,7 +163,7 @@ body {
     // Angular Material Table
     .cust--mat--table{  
         border-radius: 8px;
-        .mat-mdc-table{
+        .mat-mdc-table{ 
             border-radius: 8px;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
             thead{
@@ -180,6 +183,7 @@ body {
                         .mat-sort-header-container{
                             .mat-sort-header-content{
                                 text-align: left;
+                                color: #001F2B;
                             }
                         }
                     }
@@ -193,11 +197,15 @@ body {
                         padding: 10px 16px;
                         background: #FBFBFB;
                         border: 0;
+                        color: #001F2B;
                         &:first-child{
                             border-bottom-left-radius:8px
                         }
                         &:last-child{
                             border-bottom-right-radius:8px
+                        }
+                        .icon--btn{
+                            height: auto;
                         }
                     }
                     &.mat-mdc-no-data-row{
