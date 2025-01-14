@@ -10,6 +10,12 @@ import { AlertModalComponent } from 'src/app/theme/common/alert-modal/alert-moda
   styleUrl: './add-hospital.component.scss'
 })
 export class AddHospitalComponent {
+  toggleText: string = 'Deactive';
+  onToggleChange(event: any) 
+  { 
+    this.toggleText = event.checked ? 'Active' : 'Deactive';     
+  }
+
   readonly hname = new FormControl('', [Validators.required]);
   readonly adOne = new FormControl('', [Validators.required]);
   readonly adTwo = new FormControl('', [Validators.required]);
@@ -24,6 +30,7 @@ export class AddHospitalComponent {
   readonly mnumber = new FormControl('', [Validators.required]); 
 
   readonly dialog = inject(MatDialog);
+  
   alertModal(){
     const dialogRef = this.dialog.open(AlertModalComponent, { 
       data: {
