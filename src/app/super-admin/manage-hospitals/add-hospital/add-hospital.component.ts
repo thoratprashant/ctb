@@ -30,11 +30,11 @@ export class AddHospitalComponent {
   readonly mnumber = new FormControl('', [Validators.required]); 
 
   readonly dialog = inject(MatDialog);
-  
+
   alertModal(){
     const dialogRef = this.dialog.open(AlertModalComponent, { 
       data: {
-        warningNote: 'Are you sure you want to delete'
+        warningNote: 'Are you sure to onboard the Hospital and the Hospital Admin? An invitation link will be sent to the registered email address of the Hospital Admin.'
       }
     });
   }

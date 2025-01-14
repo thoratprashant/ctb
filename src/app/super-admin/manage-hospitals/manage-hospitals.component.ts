@@ -37,7 +37,10 @@ export class ManageHospitalsComponent {
     const dialogRef = this.dialog.open(AlertModalComponent, {
       panelClass: 'custom-alert-container',
       data: {
-        warningNote: 'Are you sure you want to delete'
+        headerText: 'Confirmation',
+        warningNote: 'Are you sure to activate this Hospital?',
+        pinkBtnText: 'Yes',
+        blueBtnText: 'No'
       }
     });
   }
