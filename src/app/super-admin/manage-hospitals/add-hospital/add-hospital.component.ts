@@ -1,6 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { merge } from 'rxjs';
+import { AlertModalComponent } from 'src/app/theme/common/alert-modal/alert-modal.component';
 
 @Component({
   selector: 'app-add-hospital', 
@@ -20,5 +22,14 @@ export class AddHospitalComponent {
   readonly lname = new FormControl('', [Validators.required]);
   readonly haemail = new FormControl('', [Validators.required]); 
   readonly mnumber = new FormControl('', [Validators.required]); 
+
+  readonly dialog = inject(MatDialog);
+  alertModal(){
+    const dialogRef = this.dialog.open(AlertModalComponent, { 
+      data: {
+        warningNote: 'Are you sure you want to delete'
+      }
+    });
+  }
   
 }
