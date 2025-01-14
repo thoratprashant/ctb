@@ -28,7 +28,7 @@
         background: #fff;
         .mat-sidenav{
             width: 260px;
-            background-color: #00B8FF1A;
+            background-color: #e6f8ff;
             ::ng-deep{
                 .mat-drawer-inner-container{
                     .mat-mdc-nav-list{
@@ -108,5 +108,13 @@
     /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
        `<body>` to be our scrolling element for mobile layouts. */
     flex: 1 0 auto;
+  }
+  
+
+  /* iPads (portrait) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .admin--container .admin--sidenav--container .mat-sidenav { 
+        top: 64px !important;
+    }
   }
   

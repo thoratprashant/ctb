@@ -181,6 +181,7 @@ body {
     // Angular Material Table
     .cust--mat--table{  
         border-radius: 8px;
+        overflow-x: auto;
         .mat-mdc-table{ 
             border-radius: 8px;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
@@ -315,6 +316,10 @@ body {
         }
     }
     
+    .mat-sort-header-arrow { 
+        opacity: 1 !important; /* Ensure the arrow is always visible */ 
+        visibility: visible !important; /* Ensure the arrow is always visible */
+    }
 
     .password--field{
         .mdc-icon-button{
