@@ -34,7 +34,12 @@ export class AddHospitalComponent {
   alertModal(){
     const dialogRef = this.dialog.open(AlertModalComponent, { 
       data: {
-        warningNote: 'Are you sure to onboard the Hospital and the Hospital Admin? An invitation link will be sent to the registered email address of the Hospital Admin.'
+        headerText: 'Confirmation',
+        warningNote: 'Are you sure to onboard the Hospital and the Hospital Admin? An invitation link will be sent to the registered email address of the Hospital Admin.',
+        pinkBtnText: 'Yes',
+        blueBtnText: 'No',
+        yesBtnMessage: 'An invitation link sent successfully to the registered email address of the Hospital Admin.',
+        noBtnMessage: 'No' 
       }
     });
   }

@@ -40,7 +40,9 @@ export class ManageHospitalsComponent {
         headerText: 'Confirmation',
         warningNote: 'Are you sure to activate this Hospital?',
         pinkBtnText: 'Yes',
-        blueBtnText: 'No'
+        blueBtnText: 'No',
+        yesBtnMessage: 'Hospital has been active successfully.',
+        noBtnMessage: 'Hospital has been deactivate successfully.'
       }
     });
   }

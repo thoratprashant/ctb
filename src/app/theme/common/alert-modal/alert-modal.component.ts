@@ -19,19 +19,23 @@ export class AlertModalComponent {
   warningNote = 'Are you sure ?' 
   pinkBtnText = 'Yes'
   blueBtnText = 'No'
+  yesBtnMessage = 'Yes'
+  noBtnMessage = 'No'
 
   constructor( @Inject(MAT_DIALOG_DATA) public data: any) {
     this.headerText = data.headerText != undefined ? data.headerText : this.headerText;     
     this.warningNote = data.warningNote != undefined ? data.warningNote : this.warningNote;   
     this.pinkBtnText = data.pinkBtnText != undefined ? data.pinkBtnText : this.pinkBtnText;   
-    this.blueBtnText = data.blueBtnText != undefined ? data.blueBtnText : this.blueBtnText; 
+    this.blueBtnText = data.blueBtnText != undefined ? data.blueBtnText : this.blueBtnText;
+    this.yesBtnMessage = data.yesBtnMessage != undefined ? data.yesBtnMessage : this.yesBtnMessage;
+    this.noBtnMessage = data.noBtnMessage != undefined ? data.noBtnMessage : this.noBtnMessage;
   }
 
   positiveAlertModal(){
     const dialogRef = this.dialog.open(PositiveAlertComponent, {
       panelClass: 'custom-alert-container',
       data: {
-        warningNote: 'Are you sure you want to delete'
+        positiveNote: this.yesBtnMessage
       }
     });
   }
@@ -39,7 +43,7 @@ export class AlertModalComponent {
     const dialogRef = this.dialog.open(NegativeAlertComponent, {
       panelClass: 'custom-alert-container',
       data: {
-        warningNote: 'Are you sure you want to delete'
+        negativeNote: this.noBtnMessage
       }
     });
   }

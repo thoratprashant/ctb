@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -11,5 +11,9 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './negative-alert.component.scss'
 })
 export class NegativeAlertComponent {
+  negativeNote=''
 
+  constructor( @Inject(MAT_DIALOG_DATA) public data: any) {
+    this.negativeNote = data.negativeNote != undefined ? data.negativeNote : this.negativeNote;      
+  }
 }
