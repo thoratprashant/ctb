@@ -297,6 +297,7 @@ body {
     .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mat-mdc-notch-piece{
         border-color: #009BD6;
     }
+    
     // Select box (DD)
     .mat-mdc-select-panel{
         padding:0 !important;
@@ -315,10 +316,29 @@ body {
             }
         }
     }
-    
+ 
+    // Toggle button  
+    .mat-mdc-slide-toggle.mat-accent {
+        --mdc-switch-selected-focus-state-layer-color: #009BD6;
+        --mdc-switch-selected-handle-color: #009BD6;
+        --mdc-switch-selected-hover-state-layer-color: #009BD6;
+        --mdc-switch-selected-pressed-state-layer-color: #009BD6;
+        --mdc-switch-selected-focus-handle-color: #009BD6;
+        --mdc-switch-selected-hover-handle-color: #009BD6;
+        --mdc-switch-selected-pressed-handle-color: #009BD6;
+        --mdc-switch-selected-focus-track-color: #009BD6;
+        --mdc-switch-selected-hover-track-color: #009BD6;
+        --mdc-switch-selected-pressed-track-color: #009BD6;
+        --mdc-switch-selected-track-color: #009BD6;
+    }
+   .mat-accent {
+        --mdc-circular-progress-active-indicator-color: #009BD6;
+    } 
+
+    // Table sort arrow is always visible    
     .mat-sort-header-arrow { 
-        opacity: 1 !important; /* Ensure the arrow is always visible */ 
-        visibility: visible !important; /* Ensure the arrow is always visible */
+        opacity: 1 !important;  
+        visibility: visible !important; 
     }
 
     .password--field{
