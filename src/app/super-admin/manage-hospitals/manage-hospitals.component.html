@@ -15,9 +15,14 @@
         <div class="col-12 d-flex align-items-center justify-content-between">
             <h1 class="font-18 font-bold mb-4 mt-4">All Manage Hospitals</h1>
             <div class="d-flex align-items-center">
-                <button mat-button class="icon--btn"> 
+                <button mat-button class="icon--btn"  [matMenuTriggerFor]="filterMenu"> 
                     <mat-icon class="m-0 text-primary">filter_alt</mat-icon>
                 </button>
+                <mat-menu class="profile--menus" #filterMenu="matMenu" xPosition="before"> 
+                  <button mat-menu-item class="font-bold">Active</button>
+                  <button mat-menu-item class="font-bold">Deactive</button> 
+                </mat-menu>
+
                 <button mat-button class="icon--btn" [matMenuTriggerFor]="beforeMenu"> 
                     <mat-icon class="m-0 text-primary">sort</mat-icon>
                 </button>

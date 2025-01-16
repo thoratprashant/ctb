@@ -180,8 +180,7 @@ body {
 
     // Angular Material Table
     .cust--mat--table{  
-        border-radius: 8px;
-        overflow-x: auto;
+        border-radius: 8px; 
         .mat-mdc-table{ 
             border-radius: 8px;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
@@ -297,7 +296,7 @@ body {
     .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mat-mdc-notch-piece{
         border-color: #009BD6;
     }
-    
+
     // Select box (DD)
     .mat-mdc-select-panel{
         padding:0 !important;
@@ -352,5 +351,12 @@ body {
             }
         }
        
+    }
+}
+
+  /* iPads (portrait) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .cust--mat--table{ 
+        overflow-x: auto;
     }
 }

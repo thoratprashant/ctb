@@ -2,9 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-// project import 
-import { SpinnerComponent } from './components/spinner/spinner.component'; 
+ 
 
 // third party
 import { NgScrollbarModule } from 'ngx-scrollbar';
@@ -27,12 +25,10 @@ import { AdminLayoutComponent } from '../layouts/admin-layout/admin-layout.compo
   exports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule, 
-    SpinnerComponent,  
+    ReactiveFormsModule,  
   ],
   declarations: [
-    AdminLayoutComponent, 
-    SpinnerComponent
+    AdminLayoutComponent,  
   ]
 })
 export class SharedModule {}
