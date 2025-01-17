@@ -20,5 +20,5 @@ export class SignUpComponent {
     this.hide.set(!this.hide());
     event.stopPropagation();
   } 
-  onOtpChange(otp: string) { console.log('OTP changed:', otp); }
+  onOtpChange(otp: string) { }
 }

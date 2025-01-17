@@ -1,13 +1,11 @@
 <div class="admin--container" [class.layout-is-mobile]="mobileQuery.matches">
 
-  <mat-toolbar class="admin--toolbar d-flex align-items-center justify-content-between">
-    <div class="d-flex align-items-center">
+  <mat-toolbar class="ps-0 admin--toolbar d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center logo--box">
       <button class="me-2" mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button> 
       <img src="https://thoratprashant.github.io/ctb/assets/images/logo-hori.svg" alt="" class="img-fluid cursor-pointer" routerLink="/"> 
     </div>
-    <button mat-button [matMenuTriggerFor]="beforeMenu" >
-      
-    </button>
+  
     <div class="round--profile cursor-pointer d-flex align-items-center justify-content-center" [matMenuTriggerFor]="beforeMenu">
       <img src="assets/images/user/avatar-1.jpg" alt="" class="img-fluid" />
     </div>

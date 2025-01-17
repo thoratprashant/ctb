@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ChangeMobileNumberComponent } from './change-mobile-number/change-mobile-number.component';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-profile', 
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
+  readonly dialog = inject(MatDialog);
 
+  changeMobileNumber(){
+    const dialogRef = this.dialog.open(ChangeMobileNumberComponent, {
+      panelClass: 'custom-alert-container', 
+    }); 
+  }
 }

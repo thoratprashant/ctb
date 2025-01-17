@@ -1,0 +1,32 @@
+.profile--wrapper{
+    .profile--header{
+        background-color: #009BD6;
+        padding: 18px 24px;
+        border-radius: 6px;
+        .prof--round{
+            width: 84px;
+            height: 84px;
+            border-radius: 100px;
+            background-color: #fff;
+            margin-right: 10px;
+            h1{
+                font-size: 36px;
+            }
+        }
+        .pro--details{
+            color: #fff;
+            h2{
+                font-size: 18px;
+            }
+        }
+    }
+    .profile--boby{
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: -3px 9px 32px 0px rgba(159, 162, 191, 0.15);
+        margin-top: 30px;
+        .prof--footer{
+            border-top: 1px solid #F0F0F2;
+        }
+    }
+}

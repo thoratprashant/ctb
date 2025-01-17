@@ -280,6 +280,9 @@ body {
             .mat-mdc-notch-piece {
                 border-color: #ddd;
             }
+            .mdc-text-field--disabled{
+                background: #dde7ea;
+            }
         }
     } 
     .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above{
@@ -351,6 +354,47 @@ body {
             }
         }
        
+    }
+
+    // Tab Structure
+    .mat-mdc-tab-group{
+        width: 100%;
+        .mat-mdc-tab-header{
+            .mat-mdc-tab-label-container{
+                .mat-mdc-tab-list{
+                    .mat-mdc-tab-labels{
+                        border-bottom: 1px solid #f1f1f1;
+                        .mdc-tab{
+                            flex-grow: 0;
+                            &.mdc-tab-indicator--active{
+                                .mdc-tab__text-label{
+                                    color: #009BD6;
+                                }
+                            }
+                            .mdc-tab__text-label{
+                                font-family: 'Helvetica-medium' !important; 
+                                font-size: 16px;
+                                color: #919AA3;
+                                letter-spacing: normal;
+                            }
+                            .mdc-tab-indicator__content{
+                                border-color:#009BD6 ;
+                            }
+                        }
+                       
+                    }
+                }
+            }
+        }
+    }
+
+    // Popup > Modal
+    .custom-alert-container{
+        max-width: 582px !important;
+        min-width: 582px !important;
+        .modal--wrapper{
+            padding: 20px;
+        }
     }
 }
 
