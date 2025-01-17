@@ -318,6 +318,27 @@ body {
             }
         }
     }
+
+    // Mat Card 
+    .mat-mdc-card{
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
+        background-color: #fff;
+        border-radius: 8px;
+        .mat-mdc-card-header{
+            padding: 24px 16px 0;
+            .mat-mdc-card-header-text{ 
+                .mat-mdc-card-title{
+                    font-family: 'Helvetica-bold', sans-serif !important;
+                    font-size: 36px;
+                    margin-bottom: 14px;
+                }
+                .mat-mdc-card-subtitle{
+                    font-family: 'Helvetica-regular', sans-serif !important;
+                    color: #A6A3B8;
+                }
+            }
+        }
+    }
  
     // Toggle button  
     .mat-mdc-slide-toggle.mat-accent {

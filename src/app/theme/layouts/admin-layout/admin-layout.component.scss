@@ -52,6 +52,11 @@
                                     }
                                 }
                             }
+                            &:focus{
+                                background-color: #009bd6;
+                                opacity: 1;
+                                --mat-outlined-button-focus-state-layer-opacity:unset !important;
+                            }
                             .mdc-list-item__content{
                                 .mat-mdc-list-item-unscoped-content {
                                     display: flex;
