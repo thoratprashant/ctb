@@ -9,7 +9,10 @@ import { PositiveAlertComponent } from '../positive-alert/positive-alert.compone
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
-  readonly dialog = inject(MatDialog);
+  username = true;
+  userimage = false;
+
+  readonly dialog = inject(MatDialog); 
 
   changeMobileNumber(){
     const dialogRef = this.dialog.open(ChangeMobileNumberComponent, {
@@ -31,4 +34,9 @@ export class ProfileComponent {
     this.hide.set(!this.hide());
     event.stopPropagation();
   } 
+
+  changeUserImage() {
+    this.username = false;
+    this.userimage = true;
+  }
 }
