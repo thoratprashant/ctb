@@ -15,7 +15,7 @@
         <p class="mb-0 font-14 text-secondary"> Super Admin </p>
       </div>
       <button mat-menu-item class="font-bold" routerLink="/profile"> <mat-icon class="me-2 clr--001f2b">account_circle</mat-icon> My Profile</button>
-      <button mat-menu-item class="font-bold"> <mat-icon class="me-2 clr--001f2b">logout</mat-icon> Sign Out</button>
+      <button mat-menu-item class="font-bold" (click)="logout()"> <mat-icon class="me-2 clr--001f2b">logout</mat-icon> Sign Out</button>
     </mat-menu>
   </mat-toolbar>
 

@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 
 // Project import 
 import { MediaMatcher } from '@angular/cdk/layout'; 
+import { MatDialog } from '@angular/material/dialog';
+import { AlertModalComponent } from '../../common/alert-modal/alert-modal.component';
 
 @Component({
   selector: 'app-admin-layout', 
@@ -12,6 +14,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
   styleUrls: ['./admin-layout.component.scss']
 })
 export class AdminLayoutComponent {
+  readonly dialog = inject(MatDialog);
   mobileQuery: MediaQueryList;  
 
   private _mobileQueryListener: () => void;
@@ -27,5 +30,20 @@ export class AdminLayoutComponent {
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  logout() {
+    const dialogRef = this.dialog.open(AlertModalComponent, { 
+      panelClass: 'custom-alert-container',
+      autoFocus: false,
+      data: {
+        headerText: 'Confirmation',
+        warningNote: 'Are you sure to sign out?',
+        pinkBtnText: 'Yes',
+        blueBtnText: 'No',
+        yesBtnMessage: 'Sign out successfully!',
+        noBtnMessage: 'Sign out cancelled!' 
+      }
+    });
   }
 }
