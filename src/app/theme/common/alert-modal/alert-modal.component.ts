@@ -34,6 +34,7 @@ export class AlertModalComponent {
   positiveAlertModal(){
     const dialogRef = this.dialog.open(PositiveAlertComponent, {
       panelClass: 'custom-alert-container',
+      autoFocus: false,
       data: {
         positiveNote: this.yesBtnMessage
       }
@@ -42,6 +43,7 @@ export class AlertModalComponent {
   negativeAlertModal(){
     const dialogRef = this.dialog.open(NegativeAlertComponent, {
       panelClass: 'custom-alert-container',
+      autoFocus: false,
       data: {
         negativeNote: this.noBtnMessage
       }

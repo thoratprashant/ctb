@@ -33,6 +33,8 @@ export class AddHospitalComponent {
 
   alertModal(){
     const dialogRef = this.dialog.open(AlertModalComponent, { 
+      panelClass: 'custom-alert-container',
+      autoFocus: false,
       data: {
         headerText: 'Confirmation',
         warningNote: 'Are you sure to onboard the Hospital and the Hospital Admin? An invitation link will be sent to the registered email address of the Hospital Admin.',

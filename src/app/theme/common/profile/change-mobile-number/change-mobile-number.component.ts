@@ -25,6 +25,7 @@ export class ChangeMobileNumberComponent {
   submit() {
         const dialogRef = this.dialog.open(PositiveAlertComponent, {
           panelClass: 'custom-alert-container',
+          autoFocus: false,
           data: {
             positiveNote: 'Mobile number has been changed successfully.'
           }

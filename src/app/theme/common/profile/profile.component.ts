@@ -17,12 +17,15 @@ export class ProfileComponent {
   changeMobileNumber(){
     const dialogRef = this.dialog.open(ChangeMobileNumberComponent, {
       panelClass: 'custom-alert-container', 
-    }); 
+      autoFocus: false
+    }
+  ); 
   }
 
   submit() {
     const dialogRef = this.dialog.open(PositiveAlertComponent, {
       panelClass: 'custom-alert-container',
+      autoFocus: false,
       data: {
         positiveNote: 'Password has been changed successfully..'
       }

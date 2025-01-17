@@ -36,6 +36,7 @@ export class ManageHospitalsComponent {
   alertModal(){
     const dialogRef = this.dialog.open(AlertModalComponent, {
       panelClass: 'custom-alert-container',
+      autoFocus: false,
       data: {
         headerText: 'Confirmation',
         warningNote: 'Are you sure to activate this Hospital?',
