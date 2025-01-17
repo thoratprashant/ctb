@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { ChangeMobileNumberComponent } from './change-mobile-number/change-mobile-number.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { PositiveAlertComponent } from '../positive-alert/positive-alert.component';
 
 @Component({
   selector: 'app-profile', 
@@ -15,4 +16,19 @@ export class ProfileComponent {
       panelClass: 'custom-alert-container', 
     }); 
   }
+
+  submit() {
+    const dialogRef = this.dialog.open(PositiveAlertComponent, {
+      panelClass: 'custom-alert-container',
+      data: {
+        positiveNote: 'Password has been changed successfully..'
+      }
+    });
+  }
+
+  hide = signal(true);
+  clickEvent(event: MouseEvent) {
+    this.hide.set(!this.hide());
+    event.stopPropagation();
+  } 
 }
