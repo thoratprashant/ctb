@@ -105,6 +105,11 @@
                 }
             }
         } 
+        &.w-150{
+            &.mat-mdc-menu-panel{
+                min-width: 150px;
+            }
+        }
     }
   }
    

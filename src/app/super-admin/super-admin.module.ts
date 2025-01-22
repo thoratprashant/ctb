@@ -8,13 +8,15 @@ import { SharedModule } from '../theme/shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { AddHospitalComponent } from './manage-hospitals/add-hospital/add-hospital.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HospitalRequestsComponent } from './hospital-requests/hospital-requests.component';
 
 
 @NgModule({
   declarations: [
     ManageHospitalsComponent,
     AddHospitalComponent,
-    DashboardComponent
+    DashboardComponent,
+    HospitalRequestsComponent
   ],
   imports: [
     CommonModule,

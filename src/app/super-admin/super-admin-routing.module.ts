@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ManageHospitalsComponent } from './manage-hospitals/manage-hospitals.component';
 import { AddHospitalComponent } from './manage-hospitals/add-hospital/add-hospital.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HospitalRequestsComponent } from './hospital-requests/hospital-requests.component';
 
 const routes: Routes = [
     {
@@ -17,6 +18,11 @@ const routes: Routes = [
       path: 'dashboard',
       component: DashboardComponent, 
     },
+    {
+      path: 'hospital-requests',
+      component: HospitalRequestsComponent, 
+    },
+    
 ];
 
 @NgModule({
