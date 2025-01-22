@@ -12,7 +12,7 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './hospital-requests.component.html',
   styleUrl: './hospital-requests.component.scss'
 })
-export class HospitalRequestsComponent {
+export class HospitalRequestsComponent { 
   displayedColumns: string[] = 
   ['date', 'salesRepresentative', 'hospitalName', 'location', 'hospitalContactNo','contactPerson','status','actions'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
@@ -83,7 +83,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     hospitalContactNo: '+1 555 861 4506',
     contactPerson:'James White',
     status: 'accepted',
-    actions: ''
+    actions: 'false'
   }, 
   {
     date: '15/09/2024', 
@@ -93,7 +93,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     hospitalContactNo: '+1 555 861 4506',
     contactPerson:'Emily Blunt',
     status: 'pending',
-    actions: ''
+    actions: 'true'
   }, 
   {
     date: '12/02/2024', 
@@ -103,7 +103,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     hospitalContactNo: '+1 555 861 4506',
     contactPerson:'William Watson',
     status: 'rejected',
-    actions: ''
+    actions: 'false'
   },
   {
     date: '12/03/2024', 
@@ -113,7 +113,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     hospitalContactNo: '+1 555 861 4506',
     contactPerson:'James White',
     status: 'accepted',
-    actions: ''
+    actions: 'false'
   }, 
   {
     date: '15/09/2024', 
@@ -123,7 +123,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     hospitalContactNo: '+1 555 861 4506',
     contactPerson:'Emily Blunt',
     status: 'pending',
-    actions: ''
+    actions: 'true'
   }, 
   {
     date: '12/02/2024', 
@@ -133,7 +133,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     hospitalContactNo: '+1 555 861 4506',
     contactPerson:'William Watson',
     status: 'rejected',
-    actions: ''
+    actions: 'false'
   },
  
   {
@@ -154,7 +154,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     hospitalContactNo: '+1 555 861 4506',
     contactPerson:'Emily Blunt',
     status: 'pending',
-    actions: ''
+    actions: 'false'
   }, 
   {
     date: '12/02/2024', 
@@ -164,7 +164,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     hospitalContactNo: '+1 555 861 4506',
     contactPerson:'William Watson',
     status: 'rejected',
-    actions: ''
+    actions: 'true'
   },
  
   {

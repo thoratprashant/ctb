@@ -17,6 +17,20 @@
                     }
                 }
             }
+            .icon--accepted{
+                color: #009BD6;
+                &.mat-mdc-button-disabled{
+                    background: transparent !important;
+                    color: #E1E1E1 !important;
+                }
+            }
+            .icon--rejected{
+                color: #FFAEAE;
+                &.mat-mdc-button-disabled{
+                    background: transparent !important;
+                    color: #E1E1E1 !important;
+                }
+            }
         }
     }
 }
