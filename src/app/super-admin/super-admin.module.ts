@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { AddHospitalComponent } from './manage-hospitals/add-hospital/add-hospital.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HospitalRequestsComponent } from './hospital-requests/hospital-requests.component';
+import { SalesRepsComponent } from './sales-reps/sales-reps.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HospitalRequestsComponent } from './hospital-requests/hospital-requests
     ManageHospitalsComponent,
     AddHospitalComponent,
     DashboardComponent,
-    HospitalRequestsComponent
+    HospitalRequestsComponent,
+    SalesRepsComponent
   ],
   imports: [
     CommonModule,

@@ -4,6 +4,7 @@ import { ManageHospitalsComponent } from './manage-hospitals/manage-hospitals.co
 import { AddHospitalComponent } from './manage-hospitals/add-hospital/add-hospital.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HospitalRequestsComponent } from './hospital-requests/hospital-requests.component';
+import { SalesRepsComponent } from './sales-reps/sales-reps.component';
 
 const routes: Routes = [
     {
@@ -21,6 +22,10 @@ const routes: Routes = [
     {
       path: 'hospital-requests',
       component: HospitalRequestsComponent, 
+    },
+    {
+      path: 'sales-reps',
+      component: SalesRepsComponent, 
     },
     
 ];

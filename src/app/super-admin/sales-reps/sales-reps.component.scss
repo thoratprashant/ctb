@@ -1,19 +1,15 @@
-
-
-.allreq--table{
+.asr--table{
     ::ng-deep{
         .mat-mdc-table{
             thead{
                 tr{
                     th{
-                        &:nth-child(1){width: 100px;}
-                        &:nth-child(2){width: 10%;}
-                        &:nth-child(3){width: 15%;}
-                        &:nth-child(4){width: 15%;}
-                        &:nth-child(5){width: 150px;}
-                        &:nth-child(6){width: 10%;}
-                        &:nth-child(7){width: 100px;}
-                        &:nth-child(8){width: 100px;}
+                        &:nth-child(1){width: 15%;}
+                        &:nth-child(2){width: 15%;}
+                        &:nth-child(3){width: auto;}
+                        &:nth-child(4){width: 150px;}
+                        &:nth-child(5){width: 180px;}
+                        &:nth-child(6){width: 170px;} 
                     }
                 }
             }
