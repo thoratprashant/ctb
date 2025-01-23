@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { ChangeMobileNumberComponent } from './change-mobile-number/change-mobile-number.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { PositiveAlertComponent } from '../positive-alert/positive-alert.component';
+import { ChangeEmailComponent } from './change-email/change-email.component';
 
 @Component({
   selector: 'app-profile', 
@@ -18,8 +19,14 @@ export class ProfileComponent {
     const dialogRef = this.dialog.open(ChangeMobileNumberComponent, {
       panelClass: 'custom-alert-container', 
       autoFocus: false
-    }
-  ); 
+    }); 
+  }
+
+  changeEmail(){
+    const dialogRef = this.dialog.open(ChangeEmailComponent, {
+      panelClass: 'custom-alert-container', 
+      autoFocus: false
+    });
   }
 
   submit() {

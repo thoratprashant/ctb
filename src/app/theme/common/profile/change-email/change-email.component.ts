@@ -3,11 +3,11 @@ import { PositiveAlertComponent } from '../../positive-alert/positive-alert.comp
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-change-mobile-number', 
-  templateUrl: './change-mobile-number.component.html',
-  styleUrl: './change-mobile-number.component.scss'
+  selector: 'app-change-email', 
+  templateUrl: './change-email.component.html',
+  styleUrl: './change-email.component.scss'
 })
-export class ChangeMobileNumberComponent {
+export class ChangeEmailComponent {
   otpSection = false;
   readonly dialog = inject(MatDialog); 
 
@@ -23,11 +23,12 @@ export class ChangeMobileNumberComponent {
           panelClass: 'custom-alert-container',
           autoFocus: false,
           data: {
-            positiveNote: 'Mobile number has been changed successfully.'
+            positiveNote: 'Email has been changed successfully.'
           }
         });
   }
-  changeMobile() {
+
+  changeEmail() {
     this.otpSection = true;
   }
 }

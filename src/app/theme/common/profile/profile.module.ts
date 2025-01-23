@@ -6,12 +6,14 @@ import { ProfileComponent } from './profile.component';
 import { MaterialModule } from '../../shared/material.module';
 import { ChangeMobileNumberComponent } from './change-mobile-number/change-mobile-number.component';
 import { NgOtpInputModule } from 'ng-otp-input';
+import { ChangeEmailComponent } from './change-email/change-email.component';
 
 
 @NgModule({
   declarations: [
     ProfileComponent, 
-    ChangeMobileNumberComponent
+    ChangeMobileNumberComponent,
+    ChangeEmailComponent
   ],
   imports: [
     CommonModule,
