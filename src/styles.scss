@@ -342,6 +342,30 @@ body {
             }
         }
     }
+
+    .mat-button-toggle-group{
+        border-color: #009BD6;
+        .mat-button-toggle{
+            .mat-button-toggle-button{
+                .mat-button-toggle-label-content{
+                    font-size: 16px;
+                    font-family: 'Helvetica-medium', sans-serif !important;
+                    line-height: unset;
+                    padding: 8px 14px;
+                    .mat-pseudo-checkbox{
+                        display: none;
+                    }
+                }
+            }
+            &.mat-button-toggle-checked{
+                background-color: #009BD6;
+                color: #fff;
+            }
+            &:last-child{
+                border-left-color: #009BD6;
+            }
+        }
+    }
  
     // Toggle button  
     .mat-mdc-slide-toggle.mat-accent {

@@ -1,0 +1,78 @@
+.schedule--wrapper{
+    .schedule--outer{
+        gap: 20px;
+        .schedule--box{ 
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px; 
+            flex: 0 1 calc(33% - 10px);
+            .code--warn{
+                min-width: 72px;
+                margin-right: 8px;
+                mat-icon {
+                    margin: 0 5px;
+                    color: #FFAC84;
+                }
+                .status{
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100px;
+                    margin-left: auto;
+                    &.offline{
+                        background-color: #FF1500;
+                    }
+                    &.away{
+                        background-color: #FFD900;
+                    }
+                }
+                .lh-0{
+                    line-height: 0;
+                }
+            }
+            .sur--details{
+                min-width: 78%;
+                h2{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                    width: 290px;
+                }
+            } 
+        }
+    }
+
+}
+
+ 
+@media only screen and (min-width: 768px) and (max-width: 1365px){
+    .schedule--wrapper .schedule--outer .schedule--box{
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+@media only screen and (min-width: 980px) and (max-width: 1280px){
+    .schedule--wrapper .schedule--outer .schedule--box .sur--details h2{
+        width: 325px;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px){
+    .schedule--wrapper .schedule--outer .schedule--box .sur--details h2{
+        width: 205px;
+    }
+}
+@media only screen and (min-width: 1367px) and (max-width: 1440px){
+    .schedule--wrapper .schedule--outer .schedule--box .sur--details h2{
+        width: 230px;
+    }
+}
+/* Targeting iPad in portrait mode */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .schedule--wrapper .schedule--outer .schedule--box .sur--details h2{
+        width: 200px;
+    }
+} 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .schedule--wrapper .schedule--outer .schedule--box .sur--details h2{
+        width: 200px;
+    }
+}

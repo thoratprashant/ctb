@@ -1,1 +1,72 @@
-<p>scheduler works!</p>
+<div class="container-fluid schedule--wrapper clr--001f2b">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="font-18 font-bold mb-3 mt-1">Schedule</h1>
+        </div>
+        <div class="col-12 d-flex align-items-center">
+            <div class="form-group search--field w-100 d-flex align-items-center"> 
+                <input type="text" class="form-control" placeholder="Search Surgeon or Surgery"> 
+                <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="flex-shrink-0 ms-3">
+                    <mat-button-toggle value="week"  (click)="openDatepicker()">Week</mat-button-toggle>
+                    <mat-button-toggle value="month">Month</mat-button-toggle> 
+                    <!-- <mat-form-field>
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field> -->
+                </mat-button-toggle-group> 
+            </div>
+         </div>
+         <div class="col-12 d-flex align-items-center justify-content-between">
+            <h1 class="font-18 font-bold mb-4 mt-4">Surgeries</h1>
+            <div class="d-flex align-items-center">
+                <button mat-button class="icon--btn"  [matMenuTriggerFor]="filterMenu"> 
+                    <mat-icon class="m-0 text-primary">filter_alt</mat-icon>
+                </button>
+                <mat-menu class="profile--menus w-150" #filterMenu="matMenu" xPosition="before"> 
+                  <button mat-menu-item class="font-bold">Accepted</button>
+                  <button mat-menu-item class="font-bold">Pending</button> 
+                  <button mat-menu-item class="font-bold">Rejected</button> 
+                </mat-menu>
+
+                <button mat-button class="icon--btn" [matMenuTriggerFor]="beforeMenu"> 
+                    <mat-icon class="m-0 text-primary">sort</mat-icon>
+                </button>
+                <mat-menu class="profile--menus w-150" #beforeMenu="matMenu" xPosition="before"> 
+                  <button mat-menu-item class="font-bold">Latest on Top</button>
+                  <button mat-menu-item class="font-bold">A to Z</button>
+                  <button mat-menu-item class="font-bold">Z to A</button>
+                </mat-menu> 
+            </div>
+        </div>
+       
+        <div class="col-12 d-flex flex-wrap schedule--outer">
+            <div class="schedule--box d-flex align-items-start"  *ngFor="let surgeriesDetail of surgeriesDetails">
+                <div class="code--warn d-flex align-items-center flex-shrink-0">
+                    <p class="m-0 font-14">{{surgeriesDetail.id}}</p> 
+                    <!-- iconInfo > 
+                        If want to hide the info icon then pass d-none class in
+                        iconInfo else pass d-flex to show
+                    -->
+                    <div class="lh-0 {{surgeriesDetail.iconInfo}}"> 
+                        <mat-icon>error</mat-icon>
+                    </div>
+
+                    <!-- Status
+                    pass only offline, away 
+                    -->
+                    <span class="status d-flex {{surgeriesDetail.status}}"></span>
+                </div>
+                <div class="sur--details d-flex flex-column align-items-start">
+                    <h2 class="font-20 font-bold m-0"> 
+                        {{surgeriesDetail.drName}}
+                    </h2>
+                    <p class="font-14 text-secondary my-3">{{surgeriesDetail.degree}}</p>
+                    <button mat-raised-button color="primary" class="btn-md ">{{surgeriesDetail.btnText}}</button>
+                </div>
+            </div> 
+        </div>
+  
+    </div>
+</div>

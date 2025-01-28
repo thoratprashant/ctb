@@ -19,6 +19,11 @@ const routes: Routes = [
     loadChildren: () => import('./super-admin/super-admin.module').then(mod => mod.SuperAdminModule),
   }, 
   {
+    path: 'hospital-admin',
+    component: AdminLayoutComponent, 
+    loadChildren: () => import('./hospital-admin/hospital-admin.module').then(mod => mod.HospitalAdminModule),
+  },
+  {
     path: 'profile',
     component: AdminLayoutComponent, 
     loadChildren: () => import('./theme/common/profile/profile.module').then(mod => mod.ProfileModule),
