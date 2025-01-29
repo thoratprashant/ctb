@@ -20,7 +20,9 @@
   </mat-toolbar>
 
   <mat-sidenav-container class="admin--sidenav--container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+
+    <!-- Super Admin -->
+    <mat-sidenav *ngIf="" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
         opened="true">
       <mat-nav-list>
         <a mat-list-item routerLink="/super-admin/dashboard" routerLinkActive="active-link"> <mat-icon>dashboard</mat-icon> Dashboard</a>
@@ -34,6 +36,18 @@
       <mat-nav-list>
         <a mat-list-item routerLink="/super-admin/hospital-requests" routerLinkActive="active-link"> <mat-icon>medical_information</mat-icon> Hospital Requests</a>
       </mat-nav-list>
+    </mat-sidenav> 
+
+
+    <!-- Hospital Admin -->
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+    opened="true">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/hospital-admin/scheduler" routerLinkActive="active-link"> <mat-icon>schedule</mat-icon> Schedule</a>
+      </mat-nav-list>
+      <mat-nav-list>
+        <a mat-list-item routerLink=" " routerLinkActive="active-link"> <mat-icon>add_box</mat-icon> Connect to EHR</a>
+      </mat-nav-list> 
     </mat-sidenav> 
 
     <mat-sidenav-content>

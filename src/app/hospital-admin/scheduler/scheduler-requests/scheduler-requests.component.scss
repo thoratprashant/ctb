@@ -1,0 +1,95 @@
+.schedule--wrapper{
+    .schedule--outer{
+        gap: 20px;
+        .schedule--box{ 
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
+            padding: 20px 5px 20px 20px;
+            background-color: #fff;
+            border-radius: 5px;  
+            width: 100%;
+            .code--warn{
+                min-width: 72px;
+                margin-right: 8px;
+                mat-icon {
+                    margin: 0 5px;
+                    color: #FFAC84;
+                }
+                .status{
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100px;
+                    margin-left: auto;
+                    &.offline{
+                        background-color: #FF1500;
+                    }
+                    &.away{
+                        background-color: #FFD900;
+                    }
+                }
+                .lh-0{
+                    line-height: 0;
+                }
+            }
+            .sur--details{ 
+                h2{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                    width: 100%;
+                }
+            } 
+        }
+        .btn-md{
+            font-size: 15px !important;
+            height: auto;
+            padding: 9px 11px; 
+        }
+    }
+    .req--wrapper{
+        .req--table{
+            ::ng-deep{
+                .mat-mdc-table{
+                    thead{
+                        tr{
+                            th{
+                                &:nth-child(1){width: 25%;}
+                                &:nth-child(2){width: auto;} 
+                                &:nth-child(3){width: 150px;}
+                                &:nth-child(4){width: 100px;}
+                                &:nth-child(5){width: 100px;}
+                            }
+                        }
+                    }
+                    .icon--accepted{
+                        color: #009BD6;
+                        &.mat-mdc-button-disabled{
+                            background: transparent !important;
+                            color: #E1E1E1 !important;
+                        }
+                    }
+                    .icon--rejected{
+                        color: #FFAEAE;
+                        &.mat-mdc-button-disabled{
+                            background: transparent !important;
+                            color: #E1E1E1 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .schedule--wrapper .schedule--outer .schedule--box{
+        width: 48%;
+    }
+} 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .schedule--wrapper .schedule--outer .schedule--box{
+        flex-direction: column;
+    } 
+    .schedule--wrapper .schedule--outer .schedule--box .code--warn { 
+        margin-bottom: 10px;
+    }
+}
