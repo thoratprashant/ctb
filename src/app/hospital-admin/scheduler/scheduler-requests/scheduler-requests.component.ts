@@ -1,13 +1,44 @@
-import { Component, inject, ViewChild } from '@angular/core';
-import { MatDatepicker } from '@angular/material/datepicker';
+import { Component, inject, Injectable, ViewChild } from '@angular/core';
+import { DateAdapter, provideNativeDateAdapter } from '@angular/material/core';
+import { DateRange, MAT_DATE_RANGE_SELECTION_STRATEGY, MatDatepicker, MatDateRangeSelectionStrategy } from '@angular/material/datepicker';
 import { MatDialog } from '@angular/material/dialog'; 
 import { MatTableDataSource } from '@angular/material/table';
 import { AlertModalComponent } from 'src/app/theme/common/alert-modal/alert-modal.component';
 
+@Injectable()
+export class FiveDayRangeSelectionStrategy<D> implements MatDateRangeSelectionStrategy<D> {
+  private _dateAdapter = inject<DateAdapter<D>>(DateAdapter<D>);
+
+  selectionFinished(date: D | null): DateRange<D> {
+    return this._createFiveDayRange(date);
+  }
+
+  createPreview(activeDate: D | null): DateRange<D> {
+    return this._createFiveDayRange(activeDate);
+  }
+
+  private _createFiveDayRange(date: D | null): DateRange<D> {
+    if (date) {
+      const start = this._dateAdapter.addCalendarDays(date, -2);
+      const end = this._dateAdapter.addCalendarDays(date, 2);
+      return new DateRange<D>(start, end);
+    }
+
+    return new DateRange<D>(null, null);
+  }
+}
+
 @Component({
   selector: 'app-scheduler-requests', 
   templateUrl: './scheduler-requests.component.html',
-  styleUrl: './scheduler-requests.component.scss'
+  styleUrl: './scheduler-requests.component.scss',
+  providers: [
+    {
+      provide: MAT_DATE_RANGE_SELECTION_STRATEGY,
+      useClass: FiveDayRangeSelectionStrategy,
+    },
+    provideNativeDateAdapter(),
+  ],
 })
 export class SchedulerRequestsComponent {
     readonly dialog = inject(MatDialog);

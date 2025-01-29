@@ -1,6 +1,19 @@
 .schedule--wrapper{
+    ::ng-deep{
+        .date--range{
+            position: relative;
+            margin-left: 30px; 
+            width: 270px;
+            flex-shrink: 0;
+            &.mat-mdc-form-field{
+                .mat-mdc-form-field-subscript-wrapper{
+                    display: none;
+                }
+            } 
+        }
+    }
     .schedule--outer{
-        gap: 20px;
+        gap: 20px; 
         .schedule--box{ 
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
             padding: 20px;

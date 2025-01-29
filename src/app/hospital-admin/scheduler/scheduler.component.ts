@@ -9,9 +9,7 @@ import { MatDatepicker } from '@angular/material/datepicker';
 export class SchedulerComponent {
   @ViewChild(MatDatepicker) datepicker: MatDatepicker<Date>;
 
-  openDatepicker() {
-    this.datepicker.open();
-  }
+ 
 
   surgeriesDetails = [
     {

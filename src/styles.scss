@@ -65,6 +65,7 @@ body {
     input[type='password'] { 
         letter-spacing: 0.125em; 
     }  
+    
 
 
     .form-group label {
@@ -112,6 +113,13 @@ body {
       }
 
     // Angular Material
+    .mat-calendar-body-selected{
+        background-color: #009bd6;
+    }
+    .mat-calendar-body-in-range::before {
+        background: rgb(224 241 247);
+    }
+    .mat-calendar-body-cell,
     .mat-mdc-form-field-error,
     .mat-mdc-select-value,
     .mat-mdc-menu-content, .mat-mdc-menu-content .mat-mdc-menu-item .mat-mdc-menu-item-text,
