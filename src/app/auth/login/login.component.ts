@@ -36,6 +36,6 @@ export default class LoginComponent {
     )
     setTimeout(() => {
       dialogRef.close();
-    }, 3000); // Closes the dialog after 5000ms (5 seconds)
+    }, 3000); 
   } 
 }
