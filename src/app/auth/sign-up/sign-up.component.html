@@ -116,10 +116,14 @@
                                         value="">
                                     <div class="error" *ngIf="">Please enter valid</div>
                                 </div>
-                                <div class="form-group d-flex align-items-center justify-content-between resend--veri">
-                                    <mat-checkbox class="remember--me"> <a class="link text-decoration-none" (click)="termsAndPrivacy()">Terms of
-                                            Service</a> and <a class="link text-decoration-none">Privacy Policy
-                                            agreement</a></mat-checkbox>
+                                <div class="form-group d-flex align-items-center   resend--veri">
+                                    <mat-checkbox class="remember--me"> </mat-checkbox>
+                                    <a class="link text-decoration-none" (click)="termsAndPrivacy()">
+                                        Terms of
+                                        Service</a>
+                                        <span class="mx-2"> and </span>
+                                        <a class="link text-decoration-none" (click)="termsAndPrivacy()">Privacy Policy
+                                        agreement</a>
                                 </div> 
                                 <div class="col-12">
                                     <button mat-raised-button color="primary" class="w-100 mt-2 mb-3"

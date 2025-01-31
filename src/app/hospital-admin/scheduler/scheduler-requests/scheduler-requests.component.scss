@@ -73,6 +73,13 @@
                             }
                         }
                     }
+                    .icon--btn{
+                        .mat-icon{
+                            font-size: 22px;
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
                     .icon--accepted{
                         color: #009BD6;
                         &.mat-mdc-button-disabled{

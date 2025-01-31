@@ -1,0 +1,17 @@
+::ng-deep{
+    .cust--loader{
+        .mat-mdc-dialog-container{
+            .mat-mdc-dialog-inner-container{
+                .mat-mdc-dialog-surface{
+                    background-color: transparent;
+                    box-shadow: none;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .spinner-border{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}

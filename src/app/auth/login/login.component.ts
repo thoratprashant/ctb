@@ -1,6 +1,9 @@
 // angular import
+import { DialogRef } from '@angular/cdk/dialog';
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms'; 
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { LoaderComponent } from 'src/app/theme/common/loader/loader.component';
 
 @Component({
   selector: 'app-login', 
@@ -23,4 +26,16 @@ export default class LoginComponent {
   }
 
   onOtpChange(otp: string) { console.log('OTP changed:', otp); }
+  readonly dialog = inject(MatDialog);
+  
+  loader(){  
+      const dialogRef = this.dialog.open(LoaderComponent, {
+        panelClass: 'cust--loader', 
+        disableClose: true,
+      } 
+    )
+    setTimeout(() => {
+      dialogRef.close();
+    }, 3000); // Closes the dialog after 5000ms (5 seconds)
+  } 
 }
