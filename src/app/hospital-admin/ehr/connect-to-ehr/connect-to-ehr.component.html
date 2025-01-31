@@ -1,0 +1,36 @@
+<div class="container-fluid cte--wrapper clr--001f2b">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="font-18 font-bold mb-3 mt-1">Connect to EHR</h1>
+        </div>
+        <div class="col-12">
+            <div class="sub--header d-flex align-items-center justify-content-between w-100">
+                <h2 class="font-16 m-0 font-bold">Your connection with EPIC is established.</h2>
+                <button mat-raised-button color="primary" class="btn-md">Disable Connection</button>
+            </div>
+        </div> 
+        <div class="col-12">
+            <div class="sub--body">
+                <div class="row justify-content-center">
+                    <div class="col-8 col-lg-6">
+                        <form> 
+                            <mat-form-field appearance="outline" class="w-100 ">
+                                <mat-label>Epic Authentication Key</mat-label>
+                                <input matInput placeholder="Epic Authentication Key">
+                                <mat-error  >Error is here</mat-error>
+                            </mat-form-field> 
+                            <mat-form-field appearance="outline" class="w-100 ">
+                                <mat-label>Epic Authentication Credentials</mat-label>
+                                <input matInput placeholder="Epic Authentication Credentials">
+                                <mat-error  >Error is here</mat-error>
+                            </mat-form-field> 
+                            <div class="col-12 d-flex justify-content-center">
+                                <button mat-raised-button color="primary" class="btn-md" disabled>Validate</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
