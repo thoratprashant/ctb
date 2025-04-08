@@ -10,6 +10,8 @@ import { AddHospitalComponent } from './manage-hospitals/add-hospital/add-hospit
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HospitalRequestsComponent } from './hospital-requests/hospital-requests.component';
 import { SalesRepsComponent } from './sales-reps/sales-reps.component';
+import { AngularTextEditorComponent } from './angular-text-editor/angular-text-editor.component';
+import { NgxEditorModule } from 'ngx-editor';
 
 
 @NgModule({
@@ -18,14 +20,16 @@ import { SalesRepsComponent } from './sales-reps/sales-reps.component';
     AddHospitalComponent,
     DashboardComponent,
     HospitalRequestsComponent,
-    SalesRepsComponent
+    SalesRepsComponent,
+    AngularTextEditorComponent
   ],
   imports: [
     CommonModule,
     SuperAdminRoutingModule,
     MaterialModule,  
     SharedModule, 
-    FormsModule
+    FormsModule,
+    NgxEditorModule 
   ]
 })
 export class SuperAdminModule { }

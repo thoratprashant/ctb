@@ -5,6 +5,7 @@ import { AddHospitalComponent } from './manage-hospitals/add-hospital/add-hospit
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HospitalRequestsComponent } from './hospital-requests/hospital-requests.component';
 import { SalesRepsComponent } from './sales-reps/sales-reps.component';
+import { AngularTextEditorComponent } from './angular-text-editor/angular-text-editor.component';
 
 const routes: Routes = [
     {
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
       path: 'sales-reps',
       component: SalesRepsComponent, 
+    },
+    {
+      path: 'angular-text-editor',
+      component: AngularTextEditorComponent, 
     },
     
 ];
