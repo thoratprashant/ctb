@@ -1,26 +1,18 @@
 <div class="editor-wrapper" #editorWrapper>
-  <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"></ngx-editor-menu>
+    <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"></ngx-editor-menu>
     <form [formGroup]="form">
-  <ngx-editor 
-    [editor]="editor"
-    formControlName="content"
-    (keydown)="onKeyDown($event)"
-    (keyup)="onKeyUp($event)">
-  </ngx-editor> 
-  </form>
- 
-
-<div *ngIf="showSuggestions" class="suggestions" [style.top.px]="suggestionPos.y" [style.left.px]="suggestionPos.x">
-  <div class="suggestion-context" *ngIf="currentProperty">
-    Values for: {{currentProperty}}
-  </div>
-  <ul>
-    <li *ngFor="let item of suggestions; let i = index"
-        [class.active]="i === selectedIndex"
-        (click)="selectSuggestion(item)">
-      {{ item }}
-    </li>
-  </ul>
-</div>
-
+        <ngx-editor [editor]="editor" formControlName="content" (keydown)="onKeyDown($event)" (keyup)="onKeyUp($event)">
+        </ngx-editor>
+    </form>  
+    <div *ngIf="showSuggestions" class="suggestions" [style.top.px]="suggestionPos.y" [style.left.px]="suggestionPos.x">
+        <div class="suggestion-context" *ngIf="currentProperty">
+            Values for: {{currentProperty}}
+        </div>
+        <ul>
+            <li *ngFor="let item of suggestions; let i = index" [class.active]="i === selectedIndex"
+                (click)="selectSuggestion(item)">
+                {{ item }}
+            </li>
+        </ul>
+    </div> 
 </div>
